@@ -1,0 +1,12 @@
+.Search input
+{
+    padding: 5px;
+    margin: 10px 0px;
+    border-radius: none;
+    border: 2px solid rgb(39, 38, 38);
+    outline: none;
+}
+input:focus
+{
+    outline: none;
+}
