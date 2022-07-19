@@ -40,6 +40,12 @@ let Reducer = (state, action) => {
                 ...state,
                 page:pagess
             }}
+        case "REMOVE":
+            return{
+                ...state,
+                hits:state.hits.filter((Elem)=>Elem.objectID!=action.Payload.ID),
+            }
+
         default:
             break;
     }

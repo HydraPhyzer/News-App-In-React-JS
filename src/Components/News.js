@@ -3,7 +3,7 @@ import { useGlobalContext } from '../Context'
 import './News.css'
 
 const News = () => {
-    let { hits, nbPages, isLoading } = useGlobalContext();
+    let { hits, nbPages, isLoading,Remove } = useGlobalContext();
 
     if (isLoading) {
         return (
@@ -17,7 +17,7 @@ const News = () => {
         return (
             hits.map((Elem, Ind) => {
                 return (
-                    <div className='News' key={Ind}>
+                    <div className='News' key={Elem.objectID}>
                         <div className="Title">
                             {Elem.title}
                         </div>
@@ -29,7 +29,7 @@ const News = () => {
                             <a href={Elem.url} target="_blank" rel="noopener noreferrer">
                                 Read More
                             </a>
-                            <button>Remove</button>
+                            <button onClick={()=>{Remove(Elem.objectID)}}>Remove</button>
                         </div>
 
                     </div>

@@ -55,6 +55,15 @@ const Context = ({ children }) => {
             Type:"PREV_PAGE"
         })
     }
+    let Remove=(ID)=>
+    {
+        dispatch({
+            Type:"REMOVE",
+            Payload:{
+                ID,
+            }
+        })
+    }
 
     useEffect(() => {
         let Adress=`${API}query=${state.query}&page=${state.page}`;
@@ -63,7 +72,7 @@ const Context = ({ children }) => {
     
     return (
 
-        <AppContext.Provider value={{...state , Next ,Prev }}>
+        <AppContext.Provider value={{...state , Next ,Prev,Remove }}>
         {children}
         </AppContext.Provider>
     );
