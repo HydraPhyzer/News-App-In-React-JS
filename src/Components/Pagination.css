@@ -1,0 +1,20 @@
+.Pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px;
+}
+.Pagination button
+{
+    border: none;
+    padding: 10px 20px;
+    background-color: #07C59F;
+    color: white;
+    border-radius: 5px;
+}
+.Pagination span
+{
+    /* color: white; */
+    margin: 0px 10px;
+}

@@ -1,14 +1,21 @@
 import React from 'react'
 import Search from './Components/Search'
+import Pagination from './Components/Pagination'
+import News from './Components/News'
+import { Context } from './Context'
 import './App.css'
 
 const App = () => {
   return (
-    <div className='App'>
-      <div className="App-Content">
-        <Search/>
+    <Context>
+      <div className='App'>
+        <div className="App-Content">
+          <Search />
+          <Pagination/>
+          <News/>
+        </div>
       </div>
-    </div>
+    </Context>
   )
 }
 

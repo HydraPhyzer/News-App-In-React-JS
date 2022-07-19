@@ -1,0 +1,45 @@
+.News
+{
+    background-color: #07c59f;
+    padding: 10px;
+    border-radius: 5px;
+    color:white;
+    margin: 5px 0px;
+    width: 100%;
+}
+.News button
+{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+.Foot
+{
+    margin: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.Foot a
+{
+    color: yellow;
+}
+.Info
+{
+    margin: 5px 0px;
+    display: flex;
+    grid-gap: 10px;
+    background-color: #30d4b4;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+
+    background: linear-gradient(to right, #e66465, #9198e5);
+}
+.Info span >span
+{
+    color: #2d3436;
+}
