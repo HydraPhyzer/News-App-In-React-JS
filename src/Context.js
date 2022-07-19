@@ -43,15 +43,27 @@ const Context = ({ children }) => {
 
     const [state, dispatch] = useReducer(Reducer,Initial);
 
+    let Next=()=>
+    {
+        dispatch({
+            Type:"NEXT_PAGE"
+        })
+    }
+    let Prev=()=>
+    {
+        dispatch({
+            Type:"PREV_PAGE"
+        })
+    }
 
     useEffect(() => {
         let Adress=`${API}query=${state.query}&page=${state.page}`;
         FetchAPI(Adress);
-    }, [])
+    }, [state.page])
     
     return (
 
-        <AppContext.Provider value={{...state}}>
+        <AppContext.Provider value={{...state , Next ,Prev }}>
         {children}
         </AppContext.Provider>
     );
