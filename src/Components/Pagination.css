@@ -17,3 +17,11 @@
 {
     margin: 0px 10px;
 }
+
+@media (max-width:520px)
+{
+    .Pagination span
+    {
+        color: white;
+    }
+}

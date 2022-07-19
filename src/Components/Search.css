@@ -10,3 +10,12 @@ input:focus
 {
     outline: none;
 }
+
+@media(max-width:520px)
+{
+    .Search input
+    {
+        border: 0px;
+        border-radius: 5px;
+    }
+}
