@@ -4,9 +4,10 @@ import {useGlobalContext} from '../Context'
 
 let Search=()=>
 {
+    let {Search}=useGlobalContext();
     return(
         <div className='Search'>
-            <input type="text" placeholder='Type to Search ...'/>
+            <input type="text" onChange={(Event)=>{Search(Event.target.value)}} placeholder='Type to Search ...'/>
         </div>
     )
 }

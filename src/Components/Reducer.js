@@ -45,6 +45,11 @@ let Reducer = (state, action) => {
                 ...state,
                 hits:state.hits.filter((Elem)=>Elem.objectID!=action.Payload.ID),
             }
+        case "SEARCH":
+            return{
+                ...state,
+                query:action.Payload.Text,
+            }
 
         default:
             break;

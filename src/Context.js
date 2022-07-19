@@ -64,15 +64,24 @@ const Context = ({ children }) => {
             }
         })
     }
+    let Search=(value)=>
+    {
+        dispatch({
+            Type:"SEARCH",
+            Payload:{
+                Text:value
+            }
+        })
+    }
 
     useEffect(() => {
         let Adress=`${API}query=${state.query}&page=${state.page}`;
         FetchAPI(Adress);
-    }, [state.page])
+    }, [state.page,state.query])
     
     return (
 
-        <AppContext.Provider value={{...state , Next ,Prev,Remove }}>
+        <AppContext.Provider value={{...state , Next ,Prev,Remove,Search }}>
         {children}
         </AppContext.Provider>
     );
